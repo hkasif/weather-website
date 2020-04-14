@@ -10,8 +10,7 @@ const forcast = (lattitude,longtitude,callback)=>{
         }else{
             callback(undefined,
                 "Temperature Description is "+ body.current.weather_descriptions[0]+". Current temperature is "+
-                body.current.temperature
-                )
+                body.current.temperature+"Degrees.It feel like "+body.current.feelslike+"Degrees. Humidity is "+body.current.humidity)
         }
     })
 
