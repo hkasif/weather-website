@@ -5,6 +5,8 @@ const geocode = require("./utils/geocode.js")
 const forcast = require("./utils/forcast.js")
 
 const app = express()
+const port = process.env.PORT || 3000
+
 const pathToPublicDirectory = path.join(__dirname,"../public")
 const viewsPath = path.join(__dirname,"../template/views")
 const partialsPath = path.join(__dirname,"../template/partials")
@@ -86,6 +88,6 @@ app.get("*",(req,res)=>{
 //app.com
 //app.com/help
 //app.com/about
-app.listen(3000,()=>{
-    console.log("Server is up on port 3000")
+app.listen(port,()=>{
+    console.log("Server is up on port "+port)
 })
